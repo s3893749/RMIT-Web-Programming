@@ -1,0 +1,98 @@
+body .header-nav-container {
+  margin-left: 25vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body .header-nav-container header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+}
+body .header-nav-container header img {
+  max-height: 64px;
+}
+body .header-nav-container nav ol {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: white;
+  list-style: none;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  margin-right: 4%;
+  margin-top: 4%;
+}
+body .header-nav-container nav ol a {
+  color: #4D4D4D;
+  text-decoration: none;
+  padding: 1ch;
+}
+body .header-nav-container nav ol a img {
+  max-height: 1.5rem;
+}
+body .header-nav-container .nav-spacer {
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.h1 {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.h2 {
+  color: #4D4D4D;
+  font-size: 2rem;
+}
+
+body footer {
+  clear: both;
+  position: relative;
+  height: 20vh;
+  background-color: #333333;
+  color: white;
+}
+body footer .content {
+  max-width: 75%;
+  margin: 10vh auto;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+body #background {
+  position: absolute;
+  background-image: linear-gradient(40deg, transparent 50%, red 50%);
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+body main section {
+  height: 80vh;
+  max-width: 75%;
+  margin: 10vh auto;
+  background-color: white;
+}
+body #landing {
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

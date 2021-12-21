@@ -1,0 +1,27 @@
+@import 'config'
+@import 'navbar-header'
+@import 'helper-classes'
+@import 'headings'
+@import 'footer'
+
+body
+  padding: 0
+  margin: 0
+  background-color: $body-background
+  #background
+    position: absolute
+    background-image: linear-gradient(40deg, transparent 50%, $body-accent 50%)
+    height: 100vh
+    width: 100%
+    z-index: -1
+    left: 0
+    top: 0
+
+  main
+    section
+      height: 80vh
+      max-width: 75%
+      margin: 10vh auto
+      background-color: white
+  #landing
+    margin-top: 0
