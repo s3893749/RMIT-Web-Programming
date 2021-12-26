@@ -19,7 +19,7 @@
                 <a href="#about-us">About Us</a>
                 <a href="#seats-and-prices">Seats and Prices</a>
                 <a href="#now-showing">Now Showing</a>
-                <a href="bookings.php">Bookings</a>
+                <a href="booking.php">Bookings</a>
             </div>
             <div id="improvement">
                 <a href="mailto:s3893749@student.rmit.edu.au">
