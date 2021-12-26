@@ -3,8 +3,6 @@ body
     width: 100%
     background-color: $footer-background
     color: $footer-font-color
-
-
     #footer-main-content
       max-width: 75%
       display: flex
@@ -15,6 +13,20 @@ body
       flex-wrap: wrap
       padding-top: 1rem
       padding-bottom: 1rem
+
+    #company-section
+      max-width: 30%
+      div
+        display: flex
+        flex-direction: row
+        justify-content: center
+        img
+          max-width: 128px
+
+        p
+          text-align: left
+          line-height: 0.5rem
+
     #links
       display: flex
       flex-direction: column
@@ -25,14 +37,6 @@ body
       a:hover
         text-decoration: underline
 
-    #company-section
-      min-width: 30%
-      img
-        max-width: 128px
-
-      p
-        text-align: left
-        line-height: 0.5rem
     #improvement
       a
         text-decoration: none
@@ -62,11 +66,9 @@ body
         color: red
         border-radius: 0.25rem
         transition: background-color 200ms linear
-
     #rmit
       max-width: 100%
       background-color: #222222
       text-align: center
       padding: 1rem
       color: #A6A6A6
-
