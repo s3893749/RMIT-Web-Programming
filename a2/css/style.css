@@ -110,6 +110,21 @@ body footer #footer-main-content {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+body footer #company-section {
+  max-width: 30%;
+}
+body footer #company-section div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body footer #company-section div img {
+  max-width: 128px;
+}
+body footer #company-section div p {
+  text-align: left;
+  line-height: 0.5rem;
+}
 body footer #links {
   display: flex;
   flex-direction: column;
@@ -121,16 +136,6 @@ body footer #links a {
 }
 body footer #links a:hover {
   text-decoration: underline;
-}
-body footer #company-section {
-  min-width: 30%;
-}
-body footer #company-section img {
-  max-width: 128px;
-}
-body footer #company-section p {
-  text-align: left;
-  line-height: 0.5rem;
 }
 body footer #improvement a {
   text-decoration: none;
@@ -174,6 +179,43 @@ body footer #rmit {
   color: #A6A6A6;
 }
 
+@media only screen and (min-width: 1024px) {
+  body footer #links {
+    min-width: 30%;
+  }
+  body footer #company-section {
+    min-width: 30%;
+  }
+  body footer #improvement {
+    min-width: 30%;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  body footer #links {
+    max-width: 30%;
+  }
+  body footer #company-section {
+    min-width: 100%;
+  }
+  body footer #improvement {
+    max-width: 30%;
+  }
+}
+@media only screen and (max-width: 599px) {
+  body footer #email a:hover {
+    background-color: transparent;
+    color: white;
+  }
+  body footer #links {
+    min-width: 100%;
+  }
+  body footer #company-section {
+    min-width: 100%;
+  }
+  body footer #improvement {
+    min-width: 100%;
+  }
+}
 body {
   padding: 0;
   margin: 0;
