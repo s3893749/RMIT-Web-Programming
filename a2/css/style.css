@@ -38,37 +38,140 @@ body .header-nav-container .nav-spacer {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.flex-row-center {
+.flex-core {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: row;
+}
+
+.flex-attribute-spaced-around {
+  justify-content: space-around;
+}
+
+.flex-attribute-align-center {
+  align-items: center;
+}
+
+.flex-attribute-space-between {
+  justify-content: space-between;
 }
 
 .bold {
   font-weight: bold;
 }
 
-.h1 {
+.font-size-large {
+  font-size: 1.5rem;
+}
+
+.font-align-center {
+  text-align: center;
+}
+
+button {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: white;
+  color: red;
+  font-weight: bold;
+  transition: background-color 200ms linear;
+}
+
+h1 {
   color: white;
   font-size: 2.5rem;
 }
 
-.h2 {
+h2 {
   color: #4D4D4D;
   font-size: 2rem;
 }
 
 body footer {
-  clear: both;
-  position: relative;
-  height: 20vh;
+  width: 100%;
   background-color: #333333;
   color: white;
 }
-body footer .content {
+body footer #footer-main-content {
   max-width: 75%;
-  margin: 10vh auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: auto;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+body footer #links {
+  display: flex;
+  flex-direction: column;
+  min-width: 30%;
+}
+body footer #links a {
+  text-decoration: none;
+  color: #A6A6A6;
+}
+body footer #links a:hover {
+  text-decoration: underline;
+}
+body footer #company-section {
+  min-width: 30%;
+}
+body footer #company-section img {
+  max-width: 128px;
+}
+body footer #company-section p {
+  text-align: left;
+  line-height: 0.5rem;
+}
+body footer #improvement a {
+  text-decoration: none;
+  color: white;
+}
+body footer #improvement a p {
+  font-size: 1.25rem;
+  text-align: center;
+}
+body footer #improvement a img {
+  max-width: 64px;
+  min-width: 30%;
+}
+body footer #email {
+  max-width: 100%;
+  background-color: red;
+  text-align: center;
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+body footer #email a {
+  color: #F4F4F4;
+  padding: 0.5rem;
+}
+body footer #email a:visited {
+  color: #F4F4F4;
+}
+body footer #email a:hover {
+  text-decoration: none;
+  background-color: white;
+  color: red;
+  border-radius: 0.25rem;
+  transition: background-color 200ms linear;
+}
+body footer #rmit {
+  max-width: 100%;
+  background-color: #222222;
+  text-align: center;
+  padding: 1rem;
+  color: #A6A6A6;
 }
 
 body {
@@ -89,10 +192,18 @@ body main section {
   height: 80vh;
   max-width: 75%;
   margin: 10vh auto;
-  background-color: white;
+  background-color: #F4F4F4;
 }
 body #landing {
   margin-top: 0;
+}
+
+#toggleWireframeCSS {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 1rem;
+  z-index: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
