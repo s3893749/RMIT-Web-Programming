@@ -5,7 +5,7 @@
 
         <section id="footer-main-content">
             <div id="company-section">
-                <div class="flex-core flex-attribute-space-between">
+                <div>
                     <img src="./svg/logo.svg" alt="Luncardo Cinema Logo">
                     <h1>Luncardo Cinemas</h1>
                 </div>
