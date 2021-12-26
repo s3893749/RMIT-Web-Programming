@@ -157,3 +157,7 @@ nav ul li {
 
 footer * {
 }
+
+img {
+  max-width: 64px;
+}
