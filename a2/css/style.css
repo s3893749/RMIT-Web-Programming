@@ -310,6 +310,114 @@ body footer #rmit {
     min-width: 100%;
   }
 }
+body #debug {
+  position: sticky;
+  bottom: 0;
+  background-color: whitesmoke;
+}
+body #debug #header {
+  background-color: #e5e5e5;
+  min-height: 2rem;
+  border-top: #222222;
+  border-width: 2px;
+}
+body #debug #header h1 {
+  font-size: 1rem;
+}
+body #debug #header #border {
+  background-color: #8100D6;
+  height: 5px;
+}
+body #debug nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 1px none rgba(0, 0, 0, 0.2);
+  border-bottom-style: solid;
+}
+body #debug nav a {
+  padding: 0.25rem 0.5rem;
+  height: 100%;
+  text-decoration: none;
+  color: #404040;
+  border: 1px solid transparent;
+  border-right-color: rgba(0, 0, 0, 0.2);
+  border-left-color: rgba(0, 0, 0, 0.2);
+}
+body #debug nav a img {
+  width: 16px;
+}
+body #debug nav a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+body #debug nav item {
+  margin: 0.25rem;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+body #debug nav item img {
+  padding-right: 0.5rem;
+  max-width: 16px;
+}
+body #debug nav .float-right {
+  margin-left: auto;
+}
+body #debug nav #logo {
+  width: 20ch;
+}
+body #debug nav #logo #mobile-error {
+  display: none;
+}
+body #debug nav #logo img {
+  background-color: #8100D6;
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 0.5rem;
+}
+body #debug nav #close-icon {
+  margin-left: 1rem;
+}
+body #debug .active {
+  background-color: #8100D6;
+  color: white;
+}
+body #debug .active:hover {
+  background-color: #61009e;
+}
+body #debug .inactive-content {
+  display: none;
+}
+body #debug .active-content {
+  display: block;
+  height: 15rem;
+  width: 100%;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 599px) {
+  body #debug nav a {
+    display: none;
+  }
+  body #debug nav item {
+    display: none;
+  }
+  body #debug nav #logo {
+    display: flex;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  body #debug nav #logo #mobile-error {
+    display: initial;
+    padding: 0;
+    padding-left: 0.5rem;
+    margin: 0;
+    font-weight: bold;
+  }
+}
 body {
   padding: 0;
   margin: 0;
