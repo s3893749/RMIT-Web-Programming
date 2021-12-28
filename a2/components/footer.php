@@ -39,3 +39,12 @@
 
 </footer>
 
+<?php
+//code snipped created by https://www.phpjabbers.com/measuring-php-page-load-time-php17.html
+$time = microtime();
+$time = explode(' ', $time);
+$time = $time[1] . $time[0];
+$finish = $time;
+$total_time = round(($finish - $start), 4);
+?>
+
