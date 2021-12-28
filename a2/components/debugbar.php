@@ -1,3 +1,4 @@
+<!-- Luncardo Debugbar created by Jack Harris, design based on larvel & PHP Debugbar -->
 <aside id="debug">
     <section id="header">
         <div id="border"></div>
