@@ -1,4 +1,5 @@
 <nav>
+    <a href="#" id="mobile-toggle"><img src="../../media/svg/mobile-toggle.svg" alt="Mobile Menu Icon Light" class="icon-light"></a>
     <ol>
         <li><a href="./#about-us" class="flex-core">About Us</a></li>
         <li><a href="./#seats-and-prices" class="flex-core">Seats & Prices</a></li>
