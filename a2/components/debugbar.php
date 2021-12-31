@@ -53,7 +53,7 @@
     </section>
 
     <!-- PHP Session section, contains and displays all the session variables and data -->
-    <section id="messageContent" class="inactive-content debugbar-content">
+    <section id="messageContent" class="inactive-content">
 
         <h3>Messages: </h3>
         <pre>
@@ -66,7 +66,7 @@
     </section>
 
     <!-- PHP Session section, contains and displays all the session variables and data -->
-    <section id="sessionContent" class="inactive-content debugbar-content">
+    <section id="sessionContent" class="inactive-content">
         <h3>Session: </h3>
         <pre>
             SESSION Contains:
@@ -77,7 +77,7 @@
     </section>
 
     <!-- HTTP Request section, contains all $_GET & $_POST variables sent to the server by the user -->
-    <section id="requestContent" class="inactive-content debugbar-content">
+    <section id="requestContent" class="inactive-content">
         <h3>Request: </h3>
            GET:
            <pre>
