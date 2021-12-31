@@ -1,3 +1,7 @@
+<?php
+$message[] = "Luncardo Debugbar v0.1, created by Jack harris 30/12/2021"
+?>
+
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -27,7 +31,6 @@
     </div>
 
   <!-- Main Page Content -->
-
     <main>
         <section id="landing">
             <h2>Landing</h2>
@@ -49,6 +52,7 @@
 
   <?php include "components".DIRECTORY_SEPARATOR."footer.php"?>
 
+  <?php include "components".DIRECTORY_SEPARATOR."debugbar.php";?>
 
   </body>
 </html>
