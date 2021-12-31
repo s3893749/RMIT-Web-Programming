@@ -150,7 +150,7 @@ body .header-nav-container-sticky nav ol a {
   color: white;
 }
 body .header-nav-container-sticky nav ol a img {
-  padding-right: 1rem;
+  padding-right: 0.25rem;
   max-height: 1.5rem;
 }
 body .header-nav-container-sticky nav ol a .icon-dark {
