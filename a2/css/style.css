@@ -336,6 +336,8 @@ body #debug nav {
   border-bottom-style: solid;
 }
 body #debug nav a {
+  display: flex;
+  flex-direction: row;
   padding: 0.25rem 0.5rem;
   height: 100%;
   text-decoration: none;
@@ -343,6 +345,14 @@ body #debug nav a {
   border: 1px solid transparent;
   border-right-color: rgba(0, 0, 0, 0.2);
   border-left-color: rgba(0, 0, 0, 0.2);
+}
+body #debug nav a .count {
+  margin-left: 0.5rem;
+  background-color: #8100D6;
+  border-radius: 50%;
+  width: 16px;
+  color: white;
+  text-align: center;
 }
 body #debug nav a img {
   width: 16px;
@@ -373,7 +383,7 @@ body #debug nav #logo #mobile-error {
   display: none;
 }
 body #debug nav #logo img {
-  background-color: #8100D6;
+  background-color: transparent;
   border-radius: 50%;
   padding: 2px;
   margin-right: 0.5rem;
@@ -384,6 +394,10 @@ body #debug nav #close-icon {
 body #debug .active {
   background-color: #8100D6;
   color: white;
+}
+body #debug .active .count {
+  background-color: white;
+  color: #8100D6;
 }
 body #debug .active:hover {
   background-color: #61009e;
@@ -396,6 +410,8 @@ body #debug .active-content {
   height: 15rem;
   width: 100%;
   overflow: auto;
+  padding: 1rem;
+  padding-top: 0;
 }
 
 @media only screen and (max-width: 599px) {
@@ -416,6 +432,18 @@ body #debug .active-content {
     padding-left: 0.5rem;
     margin: 0;
     font-weight: bold;
+  }
+
+  #messageContent {
+    display: none;
+  }
+
+  #sessionContent {
+    display: none;
+  }
+
+  #requestContent {
+    display: none;
   }
 }
 body {
