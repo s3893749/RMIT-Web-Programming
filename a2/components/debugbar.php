@@ -1,12 +1,50 @@
 <!-- Luncardo Debugbar created by Jack Harris, design based on larvel & PHP Debugbar -->
+
+<!-- link script file above the debugbar, this is linked here instead of the head to ensure that the script is not present if the debugbar is not present -->
+<script src="./javascript/debugbar.js"></script>
+
 <aside id="debug">
     <section id="header">
         <div id="border"></div>
         <nav>
             <item id="logo"><img src="../../media/svg/logo.svg" alt="Luncardo Icon">Luncardo Debugbar <p id="mobile-error">Not Supported On Mobile Devices</p></item>
-            <a href="javascript:showMessages();" id="messagesButton">Messages</a>
-            <a href="javascript:showSession();" id="sessionButton">Session</a>
-            <a href="javascript:showRequest();" id="requestButton">Request</a>
+            <a href="javascript:showMessages();" id="messagesButton">Messages <?php
+                if(isset($message)){
+                    if(count($message) > 0){
+                        echo '<span class="count">';
+                        echo count($message);
+                        echo '</span>';
+                    }
+                }?></a>
+            <a href="javascript:showSession();" id="sessionButton">Session<?php
+                if(isset($_SESSION)){
+                    if(count($_SESSION) > 0){
+                        echo '<span class="count">';
+                        echo count($_SESSION);
+                        echo '</span>';
+                    }
+                }?></a>
+            <a href="javascript:showRequest();" id="requestButton">Request<?php
+                $request_total = 0;
+
+                if(isset($_POST)){
+                    if(count($_POST) > 0){
+                        $request_total += count($_POST);
+                    }
+                }
+                if(isset($_GET)){
+                    if(count($_GET) > 0){
+                        $request_total += count($_GET);
+                    }
+                }
+
+                if($request_total > 0){
+                    echo '<span class="count">';
+                    echo $request_total;
+                    echo '</span>';
+                }
+
+                ?></a>
             <item class="float-right"><img src="../../media/svg/clock.svg" alt="Clock Icon"><?php echo $total_time*1000; ?>ms</item>
             <item ><img src="../../media/svg/ram-icon.svg" alt="Ram Usage Icon"><?php echo round(memory_get_usage(true)/1048576,2);?>mb</item>
             <item>php <?php echo phpversion()?></item>
@@ -14,14 +52,21 @@
         </nav>
     </section>
 
+    <!-- PHP Session section, contains and displays all the session variables and data -->
     <section id="messageContent" class="inactive-content">
-        <!-- PHP Session section, contains and displays all the session variables and data -->
 
         <h3>Messages</h3>
+        <?php
+        if(isset($message)){
+            foreach ($message as $value){
+                echo $value;
+            }
+        }
+        ?>
     </section>
 
-    <section id="sessionContent" class="inactive-content">
     <!-- PHP Session section, contains and displays all the session variables and data -->
+    <section id="sessionContent" class="inactive-content">
         <h3>PHP Session</h3>
         <pre>
             SESSION Contains:
@@ -31,8 +76,8 @@
         </pre>
     </section>
 
-    <section id="requestContent" class="inactive-content">
     <!-- HTTP Request section, contains all $_GET & $_POST variables sent to the server by the user -->
+    <section id="requestContent" class="inactive-content">
         <h3>HTTP Request</h3>
        <pre>
            GET Contains:
