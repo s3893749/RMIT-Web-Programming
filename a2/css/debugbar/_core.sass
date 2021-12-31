@@ -21,6 +21,8 @@ body
       border-bottom-style: solid
 
       a
+        display: flex
+        flex-direction: row
         padding: 0.25rem 0.5rem
         height: 100%
         text-decoration: none
@@ -28,6 +30,13 @@ body
         border: 1px solid transparent
         border-right-color: rgba(0, 0, 0, 0.2)
         border-left-color: rgba(0, 0, 0, 0.2)
+        .count
+          margin-left: 0.5rem
+          background-color: #8100D6
+          border-radius: 50%
+          width: 16px
+          color: white
+          text-align: center
 
         img
           width: 16px
@@ -52,7 +61,7 @@ body
         #mobile-error
           display: none
         img
-          background-color: #8100D6
+          background-color: transparent
           border-radius: 50%
           padding: 2px
           margin-right: 0.5rem
@@ -63,8 +72,12 @@ body
     .active
       background-color: #8100D6
       color: white
+      .count
+        background-color: white
+        color: #8100D6
     .active:hover
       background-color: #61009e
+
 
     .inactive-content
       display: none
@@ -74,5 +87,7 @@ body
       height: 15rem
       width: 100%
       overflow: auto
+      padding: 1rem
+      padding-top: 0
 
 
