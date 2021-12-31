@@ -53,21 +53,21 @@
     </section>
 
     <!-- PHP Session section, contains and displays all the session variables and data -->
-    <section id="messageContent" class="inactive-content">
+    <section id="messageContent" class="inactive-content debugbar-content">
 
-        <h3>Messages</h3>
+        <h3>Messages: </h3>
+        <pre>
         <?php
         if(isset($message)){
-            foreach ($message as $value){
-                echo $value;
-            }
+            print_r($message);
         }
         ?>
+         </pre>
     </section>
 
     <!-- PHP Session section, contains and displays all the session variables and data -->
-    <section id="sessionContent" class="inactive-content">
-        <h3>PHP Session</h3>
+    <section id="sessionContent" class="inactive-content debugbar-content">
+        <h3>Session: </h3>
         <pre>
             SESSION Contains:
             <?php if(isset($_SESSION)){
@@ -77,14 +77,16 @@
     </section>
 
     <!-- HTTP Request section, contains all $_GET & $_POST variables sent to the server by the user -->
-    <section id="requestContent" class="inactive-content">
-        <h3>HTTP Request</h3>
-       <pre>
-           GET Contains:
-           <?php print_r($_GET) ?>
-           POST Contains:
-           <?php print_r($_POST) ?>
-       </pre>
+    <section id="requestContent" class="inactive-content debugbar-content">
+        <h3>Request: </h3>
+           GET:
+           <pre>
+                <?php print_r($_GET) ?>
+           </pre>
+           POST:
+           <pre>
+                <?php print_r($_POST) ?>
+           </pre>
     </section>
 
     <!-- Override the bottom margin of the toggle wireframe button when the debugbar is present, this allows the button to appear above the minimized debug bar -->
