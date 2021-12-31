@@ -18,7 +18,7 @@
 
 <div id="background"></div>
 <!-- Header & Navbar container -->
-<div class="header-nav-container">
+<div class="header-nav-container" id="header-nav-container">
     <!-- Header -->
     <?php include "components".DIRECTORY_SEPARATOR."header.php"?>
     <!-- Navbar -->
@@ -40,3 +40,7 @@
 
 </body>
 </html>
+
+
+<!-- Sticky Navbar script by W3 schools https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+<script src="javascript/navbar.js"></script>
