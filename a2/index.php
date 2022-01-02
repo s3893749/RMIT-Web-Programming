@@ -35,18 +35,15 @@ $message[] = "Luncardo Debugbar v0.1, created by Jack harris 30/12/2021"
 
   <!-- Main Page Content -->
     <main>
-        <section id="landing">
-            <h2>Landing</h2>
-        </section>
-        <section>
+        <section id="about-us">
             <h2>About Us</h2>
             <p>add stuff here!</p>
         </section>
-        <section>
+        <section id="seats-and-prices">
             <h2>Seats and Prices</h2>
             <p>add stuff here!</p>
         </section>
-        <section>
+        <section id="now-showing">
             <h2>Now Showing</h2>
             <p>add stuff here!</p>
         </section>
