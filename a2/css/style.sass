@@ -45,6 +45,37 @@ body
       max-width: 75%
       margin: 10vh auto
       background-color: #F4F4F4
+    .card-container
+      position: relative
+      width: 250px
+      height: 320px
+      background-color: greenyellow
+      .card
+        position: absolute
+        width: 100%
+        height: 100%
+        transform-style: preserve-3d
+        transition: all 0.5s ease
+        background-color: yellow
+        .front
+          position: absolute
+          width: 100%
+          height: 100%
+          backface-visibility: hidden
+          background-color: yellow
+          color: black
+        .back
+          position: absolute
+          width: 100%
+          height: 100%
+          backface-visibility: hidden
+          background-color: yellow
+          color: black
+          transform: rotateY(180deg)
+      .card:focus
+        transform: rotateY(180deg)
+      .card:hover
+        transform: rotateY(180deg)
   #landing
     margin-top: 0
 
