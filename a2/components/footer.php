@@ -15,7 +15,6 @@
             </div>
             <div id="links">
                 <p class="bold">Links:</p>
-                <a href="./#landing">Landing</a>
                 <a href="./#about-us">About Us</a>
                 <a href="./#seats-and-prices">Seats and Prices</a>
                 <a href="./#now-showing">Now Showing</a>
