@@ -63,7 +63,8 @@ body .header-nav-container nav ol {
   list-style: none;
   padding: 0.5rem 2rem;
   border-radius: 1rem;
-  margin-right: 4%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 4%;
 }
 body .header-nav-container nav ol a {
@@ -121,7 +122,8 @@ body .header-nav-container .nav-spacer {
     background-color: white;
     width: 100%;
     position: relative;
-    top: 4rem;
+    height: 100vh;
+    top: 0;
     left: 0;
   }
   body .header-nav-container .mobile-menu a {
@@ -135,8 +137,12 @@ body .header-nav-container .nav-spacer {
     width: 80%;
     margin: auto;
     padding: 0.5rem;
+    padding-top: 1rem;
     color: #4D4D4D;
     text-decoration: none;
+  }
+  body .header-nav-container .mobile-menu a:hover {
+    background-color: #e5e5e5;
   }
   body .header-nav-container .mobile-menu img {
     max-width: 64px;
@@ -162,6 +168,11 @@ body .header-nav-container-sticky nav ol {
   box-shadow: none;
   padding-left: 10%;
   padding-right: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+body .header-nav-container-sticky nav ol .nav-spacer {
+  background-color: white;
 }
 body .header-nav-container-sticky nav ol a {
   color: white;
