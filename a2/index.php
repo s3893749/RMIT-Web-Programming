@@ -45,7 +45,12 @@ $message[] = "Luncardo Debugbar v0.1, created by Jack harris 30/12/2021"
         </section>
         <section id="now-showing">
             <h2>Now Showing</h2>
-            <p>add stuff here!</p>
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">Im the front!</div>
+                    <div class="back">Hello front, im the back</div>
+                </div>
+            </div>
         </section>
 
     </main>
