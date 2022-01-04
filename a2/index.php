@@ -1,5 +1,15 @@
 <?php
-$message[] = "Luncardo Debugbar v0.1, created by Jack harris 30/12/2021"
+//Debugbar message example
+use components\Console;
+
+$message[] = "Luncardo Debugbar v0.1, created by Jack harris 30/12/2021";
+
+//include PHP Console log
+include "components". DIRECTORY_SEPARATOR . "Console.php";
+
+$test = ["abc" => "string", 123 => "number"];
+Console::log($test);
+Console::log($_GET);
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +56,7 @@ $message[] = "Luncardo Debugbar v0.1, created by Jack harris 30/12/2021"
         <section id="now-showing">
             <h2>Now Showing</h2>
             <div class="card-container">
-                <div class="card">
+                <div class="card" tabindex="1234">
                     <div class="front">Im the front!</div>
                     <div class="back">Hello front, im the back</div>
                 </div>
