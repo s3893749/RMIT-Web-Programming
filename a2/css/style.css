@@ -523,6 +523,11 @@ body #debug .active-content {
     display: none;
   }
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -575,9 +580,6 @@ body main .card-container .card .back {
   transform: rotateY(180deg);
 }
 body main .card-container .card:focus {
-  transform: rotateY(180deg);
-}
-body main .card-container .card:hover {
   transform: rotateY(180deg);
 }
 body #landing {

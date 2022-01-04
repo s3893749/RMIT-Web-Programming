@@ -25,6 +25,9 @@
 @import 'debugbar/core'
 @import 'debugbar/mobile'
 
+html
+  scroll-behavior: smooth
+  scroll-padding-top: 120px
 
 body
   padding: 0
@@ -74,8 +77,8 @@ body
           transform: rotateY(180deg)
       .card:focus
         transform: rotateY(180deg)
-      .card:hover
-        transform: rotateY(180deg)
+      //.card:hover
+      //  transform: rotateY(180deg)
   #landing
     margin-top: 0
 
