@@ -44,6 +44,14 @@ class Seat
         }
     }
 
+    public function getCode(){
+        return $this->code;
+    }
+
+    public function getName(){
+        return $this->type;
+    }
+
     public function renderPrice(){
         echo "<p>$ $this->price</p>";
     }
