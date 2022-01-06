@@ -1,3 +1,4 @@
+//created by Jack Harris
 window.addEventListener("DOMContentLoaded",function (){
 
     const slider = document.getElementById("imageSlider");
@@ -18,9 +19,6 @@ window.addEventListener("DOMContentLoaded",function (){
 
         slides[slideCounter].style.display = "block";
     },5000)
-
-
-    console.log(slides);
 
 })
 

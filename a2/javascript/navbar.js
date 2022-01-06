@@ -1,5 +1,5 @@
 //Navbar script createed by W3 schools https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
-//Not created by JACK HARRIS, accessed and copied on 31/12/2021
+// !!!NOT!!! created by JACK HARRIS, accessed and copied on 31/12/2021
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {stickyFunction()};
