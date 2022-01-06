@@ -40,7 +40,12 @@ foreach(json_decode($seatsJson) as $seat){
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <script src='../wireframe.js'></script>
 
-    <script src="javascript/seatingSlider.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+
+      <script src="javascript/seatingSlider.js"></script>
 
 
 
@@ -63,12 +68,22 @@ foreach(json_decode($seatsJson) as $seat){
     <main>
         <section id="about-us">
             <h2>About Us</h2>
-            <p>add stuff here!</p>
+            <h3>After a hard year of covid19 lockdowns and renovations we are proud to welcome all our guests back to Luncardo Cinemas for our grand reopening!</h3>
+            <h3>Introducing our....</h3>
+            <ol>
+                <li>Brand new state of the art seating and first class recliners</li>
+                <li>Unified Dolby Vision projection and atoms sound providing the best in viewing and audio experience!</li>
+                <li>Community focuses and fantastic customer service guarantee!</li>
+            </ol>
+            <div class="image-container">
+                <img src="../../media/png/dolby-atomos.png" alt="Dolby Atomos Logo" id="dolby-atomos">
+                <img src="../../media/png/dolby-vision.png" alt="Dolby Vison Logo" id="dolby-vision">
+            </div>
         </section>
         <section id="seats-and-prices">
             <h2>Seats and Prices ....</h2>
-            <div class="flex">
-                <div class="left">
+            <div class="container">
+                <div>
                     <div class="flex">
                         <div class="left">
                             <h4>Seats</h4>
@@ -110,7 +125,7 @@ foreach(json_decode($seatsJson) as $seat){
                     </div>
 
                 </div>
-                <div class="right">
+                <div>
                     <div id="imageSlider">
                     <?php
                     foreach ($seating as $seat){
