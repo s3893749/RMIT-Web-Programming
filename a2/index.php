@@ -1,15 +1,27 @@
 <?php
-//Debugbar message example
-use components\Console;
+//import PHP componment
+use components\Movie;
+use components\Seat;
 
-$message[] = "Luncardo Debugbar v0.1, created by Jack harris 30/12/2021";
+//include PHP Classes
+include "components". DIRECTORY_SEPARATOR . "Movie.php";
+include "components". DIRECTORY_SEPARATOR . "Seat.php";
 
-//include PHP Console log
-include "components". DIRECTORY_SEPARATOR . "Console.php";
+//load movies and seats from Json file
+$moviesJson = file_get_contents("movies.json");
+$movies = [];
+$seatsJson = file_get_contents("seating.json");
+$seating = [];
 
-$test = ["abc" => "string", 123 => "number"];
-Console::log($test);
-Console::log($_GET);
+
+//perfrom a foreach loop to decode the json into a php array and create a movie object based of it
+foreach (json_decode($moviesJson) as $movie){
+    $movies[] = new Movie((array)$movie);
+}
+//perform the foreach loop to decode the json and create the seat objects and place them in the seating array
+foreach(json_decode($seatsJson) as $seat){
+    $seating[] = new Seat((array)$seat);
+}
 ?>
 
 <!DOCTYPE html>
@@ -28,12 +40,16 @@ Console::log($_GET);
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <script src='../wireframe.js'></script>
 
+    <script src="javascript/seatingSlider.js"></script>
+
 
 
   </head>
 
   <body>
   <div id="background"></div>
+  <div id="background-2"></div>
+
   <!-- Header & Navbar container -->
     <div class="header-nav-container" id="header-nav-container">
         <!-- Header -->
@@ -50,16 +66,77 @@ Console::log($_GET);
             <p>add stuff here!</p>
         </section>
         <section id="seats-and-prices">
-            <h2>Seats and Prices</h2>
-            <p>add stuff here!</p>
+            <h2>Seats and Prices ....</h2>
+            <div class="flex">
+                <div class="left">
+                    <div class="flex">
+                        <div class="left">
+                            <h4>Seats</h4>
+                            <?php
+                            foreach ($seating as $seat){
+                                $seat->renderType();
+                            }
+                            ?>
+                        </div>
+                        <div class="middle">
+                            <h4>Price</h4>
+                            <?php
+                            foreach ($seating as $seat){
+                                $seat->renderPrice();
+                            }
+                            ?>
+                        </div>
+                        <div class="middle">
+                            <h4>Discounted Price</h4>
+                            <?php
+                            foreach ($seating as $seat){
+                                $seat->renderDiscountedPrice();
+                            }
+                            ?>
+                        </div>
+
+                        <div class="middle">
+                            <h4>Discount Times</h4>
+
+                            <?php
+                            foreach ($seating as $seat){
+                                echo "<p> Times <span data-tooltip='";
+                                $seat->renderDiscountTimes();
+                                 echo " '><img src='../../media/svg/clock.svg' alt='Clock Icon'></span></p>";
+                            }
+                            ?>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right">
+                    <div id="imageSlider">
+                    <?php
+                    foreach ($seating as $seat){
+                            if($seat->hasImage()) {
+                                echo "<div class='slide'>";
+                                $seat->renderType("h3");
+                                $seat->renderImage();
+                                echo "</div>";
+
+                            }
+                    }
+                    ?>
+                    </div>
+                </div>
+
+            </div>
+
         </section>
         <section id="now-showing">
-            <h2>Now Showing</h2>
-            <div class="card-container">
-                <div class="card" tabindex="1234">
-                    <div class="front">Im the front!</div>
-                    <div class="back">Hello front, im the back</div>
-                </div>
+            <h2>Now Showing ....</h2>
+            <div id="movie-cards">
+            <?php
+            //render each movie in the now showing section
+            foreach ($movies as $movie){
+                $movie->render();
+            }?>
             </div>
         </section>
 
