@@ -1,0 +1,72 @@
+[
+  {
+    "type": "Standard Adult",
+    "price": 20.50,
+    "discounted-price": 15.00,
+    "code": "STA",
+    "photo": "../../media/Profern-Standard-Twin.png",
+    "discount-times": [
+      "Monday all day",
+      "Tuesday Afternoon",
+      "Wednesday Afternoon",
+      "Thursday Afternoon",
+      "Friday Afternoon"
+    ]
+  },
+  {
+    "type": "Standard Concession",
+    "price": 18.00,
+    "discounted-price": 13.50,
+    "code": "STP",
+    "photo": null,
+    "discount-times": [
+      "Monday all day",
+      "Tuesday Afternoon",
+      "Wednesday Afternoon",
+      "Thursday Afternoon",
+      "Friday Afternoon"
+    ]
+  },
+  {
+    "type": "Standard Child",
+    "price": 16.50,
+    "discounted-price": 12.00,
+    "code": "STC",
+    "photo": null,
+    "discount-times": [
+      "Monday all day",
+      "Tuesday Afternoon",
+      "Wednesday Afternoon",
+      "Thursday Afternoon",
+      "Friday Afternoon"
+    ]
+  },
+  {
+    "type": "First Class Adult",
+    "price": 30.00,
+    "discounted-price": 24.00,
+    "code": "FCA",
+    "photo": "../../media/Profern-Verona-Twin.png",
+    "discount-times": [
+      "Monday all day",
+      "Tuesday Afternoon",
+      "Wednesday Afternoon",
+      "Thursday Afternoon",
+      "Friday Afternoon"
+    ]
+  },
+  {
+    "type": "First Class Child",
+    "price": 24.00,
+    "discounted-price": 21.00,
+    "code": "FCC",
+    "photo": null,
+    "discount-times": [
+      "Monday all day",
+      "Tuesday Afternoon",
+      "Wednesday Afternoon",
+      "Thursday Afternoon",
+      "Friday Afternoon"
+    ]
+  }
+]
