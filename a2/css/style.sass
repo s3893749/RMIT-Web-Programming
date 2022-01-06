@@ -25,62 +25,22 @@
 @import 'debugbar/core'
 @import 'debugbar/mobile'
 
+//import movie card files
+@import 'movie-cards/core'
+@import "movie-cards/mobile"
+
+//import index page files
+@import 'pages/index/core'
+@import 'pages/index/mobile'
+
+//import seating styles
+@import 'seating/core'
+@import 'seating/mobile'
+@import 'seating/tablet'
+
 html
   scroll-behavior: smooth
   scroll-padding-top: 120px
-
-body
-  padding: 0
-  margin: 0
-  background-color: $body-background
-  #background
-    position: absolute
-    background-image: linear-gradient(40deg, transparent 50%, $body-accent 50%)
-    height: 100vh
-    width: 100%
-    z-index: -1
-    left: 0
-    top: 0
-
-  main
-    section
-      height: 80vh
-      max-width: 75%
-      margin: 10vh auto
-      background-color: #F4F4F4
-    .card-container
-      position: relative
-      width: 250px
-      height: 320px
-      background-color: greenyellow
-      .card
-        position: absolute
-        width: 100%
-        height: 100%
-        transform-style: preserve-3d
-        transition: all 0.5s ease
-        background-color: yellow
-        .front
-          position: absolute
-          width: 100%
-          height: 100%
-          backface-visibility: hidden
-          background-color: yellow
-          color: black
-        .back
-          position: absolute
-          width: 100%
-          height: 100%
-          backface-visibility: hidden
-          background-color: yellow
-          color: black
-          transform: rotateY(180deg)
-      .card:focus
-        transform: rotateY(180deg)
-      //.card:hover
-      //  transform: rotateY(180deg)
-  #landing
-    margin-top: 0
 
 #toggleWireframeCSS
   position: fixed
@@ -88,3 +48,48 @@ body
   bottom: 0
   margin: 1rem
   z-index: 0
+
+//tool tip CSS code created by https://w3collective.com/html-css-tooltip/
+[data-tooltip]
+  position: relative
+  cursor: pointer
+  font-size: 12px
+  border-radius: 1em
+  padding: 0 0.5em
+
+[data-tooltip]:before
+  content: attr(data-tooltip)
+  position: absolute
+  opacity: 0
+  width: 150px
+  transform: translateX(-50%)
+  bottom: 25px
+  padding: 1rem
+  background-color: white
+  border-radius: 0.25em
+  color: black
+  text-align: center
+  transition: 0.2s
+  font-size: 1rem
+  box-shadow: 0px 0px 5px 2.5px  rgba(0, 0, 0, 0.3)
+
+
+[data-tooltip]:after
+  content: ""
+  position: absolute
+  opacity: 0
+  bottom: 15px
+  margin-left: -5px
+  border: 5px solid black
+  border-color: black transparent transparent transparent
+  transition: 0.2s
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after
+  opacity: 1
+
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after
+  opacity: 1
+
+
