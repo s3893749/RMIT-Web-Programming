@@ -23,10 +23,8 @@ foreach(json_decode($seatsJson) as $seat){
     $seating[] = new Seat((array)$seat);
 }
 ?>
-
 <!DOCTYPE html>
 <html lang='en'>
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,13 +43,23 @@ foreach(json_decode($seatsJson) as $seat){
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
 
-      <script src="javascript/seatingSlider.js"></script>
+    <script src="javascript/seatingSlider.js"></script>
 
 
 
   </head>
 
   <body>
+
+  <?php
+  //error check
+  if(isset($_GET['error'])){
+      $error = $_GET['error'];
+      echo "<script>alert('$error : Please select a valid film from our now showing menu to access the booking page')</script>";
+  }
+  ?>
+
+
   <div id="background"></div>
   <div id="background-2"></div>
 
