@@ -15,6 +15,8 @@ class Movie
     private string $rating;
     private string $code;
     private array $times;
+    private string $trailer;
+    private array $time_ids;
 
     public function __construct(array $movieData)
     {
@@ -24,6 +26,8 @@ class Movie
         $this->rating = $movieData["rating"];
         $this->code = $movieData["code"];
         $this->times = $movieData["times"];
+        $this->trailer = $movieData["trailer"];
+        $this->time_ids = $movieData["time_ids"];
 
     }
 
@@ -58,6 +62,26 @@ class Movie
             echo '</div>';
         echo '</div>';
 
+    }
+
+    public function getCode(){
+        return $this->code;
+    }
+
+    public function getTitle(){
+        return $this->title;
+    }
+
+    public function getTrailer(){
+        return $this->trailer;
+    }
+
+    public function getTimes(){
+        return $this->times;
+    }
+
+    public function getTimeIds(){
+        return $this->time_ids;
     }
 
 }
