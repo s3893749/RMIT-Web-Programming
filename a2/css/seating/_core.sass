@@ -3,16 +3,13 @@ body
     #seats-and-prices
       h2
         color: white
-      .flex
-        display: flex
-        flex-direction: row
-        flex-wrap: wrap
-        .left
-          width: 60%
+      .container
+        div
+          width: 100%
+          margin-top: 2rem
           .flex
             display: flex
             flex-direction: row
-
             .left
               background-color: red
               color: white
@@ -42,13 +39,17 @@ body
 
 
         #imageSlider
+
           position: relative
           max-width: 100%
           margin: auto
+          padding-top: 2rem
           .slide
             display: none
             img
               max-width: 512px
+              display: block
+              margin: auto
             h3
               background-color: red
               color: white
@@ -56,5 +57,3 @@ body
               text-align: center
               width: 20ch
               margin: auto
-        .right
-          width: 40%
