@@ -12,7 +12,7 @@ body
     top: 0
   #background-2
     position: absolute
-    height: 90vh
+    min-height: 90vh
     width: 100%
     z-index: -1
     left: 0
@@ -35,8 +35,26 @@ body
         margin: 0
         margin-bottom: 2rem
         color: #2a2a2a
-  #landing
-    margin-top: 0
+  #about-us
+    h2
+      display: none
+    h3
+      font-size: 2rem
+      text-align: center
+    .image-container
+      position: absolute
+      left: 10%
+      top: 80vh
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      img
+        padding: 1rem
+        height: 64px
+
+
+  #now-showing
+    margin-top: 2rem
   #movie-cards
     display: flex
     flex-wrap: wrap
