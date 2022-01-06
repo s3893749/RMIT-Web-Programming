@@ -149,6 +149,7 @@ body .header-nav-container .nav-spacer {
   }
 }
 body .header-nav-container-sticky {
+  z-index: 1;
   background-color: red;
   position: fixed;
   top: 0;
@@ -168,8 +169,7 @@ body .header-nav-container-sticky nav ol {
   box-shadow: none;
   padding-left: 10%;
   padding-right: 10%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0.25rem 10% 0;
 }
 body .header-nav-container-sticky nav ol .nav-spacer {
   background-color: white;
@@ -523,11 +523,121 @@ body #debug .active-content {
     display: none;
   }
 }
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 120px;
+.card-container {
+  position: relative;
+  width: 500px;
+  min-height: 450px;
+  margin: 1rem;
+}
+.card-container .card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 5px 2.5px rgba(0, 0, 0, 0.3);
+}
+.card-container .card .front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: whitesmoke;
+  color: black;
+}
+.card-container .card .front h4 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  background-color: red;
+  color: white;
+  margin-bottom: 1rem;
+}
+.card-container .card .front .flex {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  flex-wrap: wrap;
+}
+.card-container .card .front .left {
+  min-width: 50%;
+  padding: 0.5rem;
+}
+.card-container .card .front .left img {
+  max-height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-container .card .front #rating {
+  background-color: #232323;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  max-width: 10rem;
+  margin: auto;
+  margin-top: 1rem;
+}
+.card-container .card .front .right {
+  height: 100%;
+  padding: 0.5rem;
+}
+.card-container .card .front .right h5 {
+  font-size: 1.25rem;
+  margin: 0.5rem;
+  margin-left: 0;
+  text-decoration: underline;
+}
+.card-container .card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: whitesmoke;
+  color: black;
+  transform: rotateY(180deg);
+}
+.card-container .card .back h4 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  background-color: red;
+  color: white;
+  margin-bottom: 1rem;
+}
+.card-container .card .back p {
+  padding: 1rem;
+}
+.card-container .card .back a {
+  padding: 1rem;
+}
+.card-container .card:focus {
+  transform: rotateY(180deg);
+}
+.card-container .card:hover {
+  cursor: pointer;
+  background-color: #DEDEDEFF;
 }
 
+@media only screen and (max-width: 599px) {
+  .card-container {
+    min-height: 750px;
+  }
+  .card-container .card .front .left {
+    width: 100%;
+  }
+  .card-container .card .front h4 {
+    font-size: 1.5rem;
+  }
+  .card-container .card .front .right {
+    width: 100%;
+  }
+}
 body {
   padding: 0;
   margin: 0;
@@ -542,48 +652,150 @@ body #background {
   left: 0;
   top: 0;
 }
+body #background-2 {
+  position: absolute;
+  height: 90vh;
+  width: 100%;
+  z-index: -1;
+  left: 0;
+  top: 100vh;
+  background-color: whitesmoke;
+  background-image: url("https://images.pexels.com/photos/7991319/pexels-photo-7991319.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 body main section {
-  height: 80vh;
+  padding: 1rem;
+  min-height: 80vh;
   max-width: 75%;
   margin: 10vh auto;
-  background-color: #F4F4F4;
 }
-body main .card-container {
-  position: relative;
-  width: 250px;
-  height: 320px;
-  background-color: greenyellow;
-}
-body main .card-container .card {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: all 0.5s ease;
-  background-color: yellow;
-}
-body main .card-container .card .front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background-color: yellow;
-  color: black;
-}
-body main .card-container .card .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background-color: yellow;
-  color: black;
-  transform: rotateY(180deg);
-}
-body main .card-container .card:focus {
-  transform: rotateY(180deg);
+body main section h2 {
+  margin: 0;
+  margin-bottom: 2rem;
+  color: #2a2a2a;
 }
 body #landing {
   margin-top: 0;
+}
+body #movie-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 599px) {
+  body main section {
+    max-width: 95% !important;
+  }
+}
+body main #seats-and-prices h2 {
+  color: white;
+}
+body main #seats-and-prices .flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body main #seats-and-prices .flex .left {
+  width: 60%;
+}
+body main #seats-and-prices .flex .left .flex {
+  display: flex;
+  flex-direction: row;
+}
+body main #seats-and-prices .flex .left .flex .left {
+  background-color: red;
+  color: white;
+  width: 20ch;
+  text-align: center;
+}
+body main #seats-and-prices .flex .left .flex .left h4 {
+  background-color: #d50000;
+  margin-top: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+body main #seats-and-prices .flex .left .flex .middle {
+  width: 20ch;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+body main #seats-and-prices .flex .left .flex .middle button {
+  margin: 0.125rem;
+}
+body main #seats-and-prices .flex .left .flex .middle h4 {
+  background-color: #e7e7e7;
+  margin-top: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+body main #seats-and-prices .flex .left .flex p img {
+  max-width: 16px;
+}
+body main #seats-and-prices .flex #imageSlider {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+body main #seats-and-prices .flex #imageSlider .slide {
+  display: none;
+}
+body main #seats-and-prices .flex #imageSlider .slide img {
+  max-width: 512px;
+}
+body main #seats-and-prices .flex #imageSlider .slide h3 {
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  width: 20ch;
+  margin: auto;
+}
+body main #seats-and-prices .flex .right {
+  width: 40%;
+}
+
+@media only screen and (max-width: 599px) {
+  body main #seats-and-prices .flex {
+    margin-bottom: 2rem;
+  }
+  body main #seats-and-prices .flex .left {
+    width: 100% !important;
+  }
+  body main #seats-and-prices .flex .left .middle {
+    width: 100% !important;
+  }
+  body main #seats-and-prices #imageSlider {
+    margin-bottom: 2rem;
+  }
+  body main #seats-and-prices #imageSlider .slide img {
+    max-width: 256px !important;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  body main #seats-and-prices .flex {
+    margin-bottom: 2rem;
+  }
+  body main #seats-and-prices .flex .left {
+    width: 100% !important;
+  }
+  body main #seats-and-prices .flex .left .middle {
+    width: 100% !important;
+  }
+  body main #seats-and-prices #imageSlider {
+    margin-bottom: 2rem;
+  }
+  body main #seats-and-prices #imageSlider .slide img {
+    max-width: 256px !important;
+  }
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
 }
 
 #toggleWireframeCSS {
@@ -592,6 +804,52 @@ body #landing {
   bottom: 0;
   margin: 1rem;
   z-index: 0;
+}
+
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 1em;
+  padding: 0 0.5em;
+}
+
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  opacity: 0;
+  width: 150px;
+  transform: translateX(-50%);
+  bottom: 25px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.25em;
+  color: black;
+  text-align: center;
+  transition: 0.2s;
+  font-size: 1rem;
+  box-shadow: 0px 0px 5px 2.5px rgba(0, 0, 0, 0.3);
+}
+
+[data-tooltip]:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  bottom: 15px;
+  margin-left: -5px;
+  border: 5px solid black;
+  border-color: black transparent transparent transparent;
+  transition: 0.2s;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  opacity: 1;
+}
+
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
