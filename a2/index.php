@@ -158,7 +158,7 @@ foreach(json_decode($seatsJson) as $seat){
             <?php
             //render each movie in the now showing section
             foreach ($movies as $movie){
-                $movie->render();
+                $movie->renderPreviewCard();
             }?>
             </div>
         </section>
