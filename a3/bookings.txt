@@ -1,0 +1,4 @@
+Jamal Stout,sahuq@mailinator.com,653342342,RMC,tuesday,1800 (24 Hour Time),FCA,2,48,4.8,
+Madonna Brewer,mofibapu@mailinator.com,65042432,FAM,sunday,1200 (24 Hour Time),FCA,362,10860,1086,
+Jared Sheppard,bejobyc@mailinator.com,5962312312,AHF,wednesday,1200 (24 Hour Time),STC,665,7980,798,
+Blaze Simpson,gyludenuzy@mailinator.com,28831231232,RMC,monday,1800 (24 Hour Time),STA,82,1230,123,
