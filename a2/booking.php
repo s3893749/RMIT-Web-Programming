@@ -106,7 +106,7 @@ if(!isset($_GET['code'])){
             <h3>Date & Time</h3>
             <?php
             $times = $film->getTimes();
-            $time_ids = $film->getTimeIds();
+            $time_ids = $film->getTime24();
 
             $i = 0;
             while($i < count($times)){
