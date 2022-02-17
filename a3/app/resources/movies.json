@@ -1,0 +1,106 @@
+[
+  {
+    "title": "Dune",
+    "poster": "https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+    "rating": "PG-13",
+    "synopsis": "A mythic and emotionally charged hero's journey, \"Dune\" tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, who must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive. —Warner Bros.",
+    "code": "ACT",
+    "trailer": "https://www.youtube.com/embed/8g18jFHCLXk",
+    "times": [
+      "Monday 9:00pm",
+      "Tuesday 9:00pm",
+      "Wednesday 9:00pm",
+      "Thursday 9:00pm",
+      "Friday 9:00pm",
+      "Saturday 6:00pm",
+      "Sunday 6:00pm"
+    ],
+    "times_24": [
+      {
+        "monday": 2100,
+        "tuesday": 2100,
+        "wednesday": 2100,
+        "thursday": 2100,
+        "friday": 2100,
+        "saturday": 1800,
+        "sunday": 1800
+      }
+    ]
+  },
+  {
+    "title": "Cyrano",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNDhhYjU4ZDMtYjI5OC00N2RkLTg5MGItZTNkM2Q5MzE5NjQxXkEyXkFqcGdeQXVyODk2NDQ3MTA@._V1_.jpg",
+    "rating": "PG-13",
+    "synopsis": "A man ahead of his time, Cyrano de Bergerac dazzles whether with ferocious wordplay at a verbal joust or with brilliant swordplay in a duel. But, convinced that his appearance renders him unworthy of the love of a devoted friend, the luminous Roxanne, Cyrano has yet to declare his feelings for her and Roxanne has fallen in love, at first sight, with Christian.",
+    "code": "RMC",
+    "trailer": "https://www.youtube.com/embed/5e8apSFDXsQ",
+    "times": [
+      "Monday 6:00pm",
+      "Tuesday 6:00pm",
+      "Saturday 3:00pm",
+      "Sunday 3:00pm"
+    ],
+    "times_24": [
+      {
+        "monday": 1800,
+        "tuesday": 1800,
+        "saturday": 1500,
+        "sunday": 1500
+      }
+    ]
+  },
+  {
+    "title": "Spider-Man: No Way Home",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_.jpg",
+    "rating": "PG-13",
+    "synopsis": "Peter Parker's secret identity is revealed to the entire world. Desperate for help, Peter turns to Doctor Strange to make the world forget that he is Spider-Man. The spell goes horribly wrong and shatters the multiverse, bringing in monstrous villains that could destroy the world.",
+    "code": "FAM",
+    "trailer": "https://www.youtube.com/embed/JfVOs4VSpmA",
+    "times": [
+      "Monday 12:00pm",
+      "Tuesday 12:00pm",
+      "Wednesday 6:00pm",
+      "Thursday 6:00pm",
+      "Friday 6:00pm",
+      "Saturday 12:00pm",
+      "Sunday 12:00pm"
+    ],
+    "times_24": [
+      {
+        "monday": 1200,
+        "tuesday": 1200,
+        "wednesday": 1800,
+        "thursday": 1800,
+        "friday": 1800,
+        "saturday": 1800,
+        "sunday": 1200
+      }
+    ]
+  },
+  {
+    "title": "Silent Night",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZDE1NWVjODItYTM0MS00MGJjLTkzMjctNTJjZjkwZDExYzNhXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
+    "rating": "unknown",
+    "synopsis": "Nell, Simon and their son Art host a yearly Christmas dinner at their country estate for their former school friends and their spouses. It is gradually revealed that there is an imminent environmental catastrophe and that this dinner will be their last night alive. —Frank Liesenborgs",
+    "code": "AHF",
+    "trailer": "https://www.youtube.com/embed/MukZcsN1ySU",
+    "times": [
+      "Wednesday 12:00pm",
+      "Thursday 12:00pm",
+      "Friday 12:00pm",
+      "Saturday 9:00pm",
+      "Sunday 9:00pm"
+    ],
+    "times_24": [
+      {
+        "wednesday": 1200,
+        "thursday": 1200,
+        "friday": 1200,
+        "saturday": 2100,
+        "sunday": 2100
+      }
+    ]
+  }
+]
+
+
