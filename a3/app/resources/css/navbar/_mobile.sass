@@ -1,0 +1,39 @@
+@media only screen and (max-width: 599px)
+  body
+    .header-nav-container
+      nav
+        #mobile-toggle
+          width: 32px
+          display: inherit
+          margin-top: 2.2rem
+          margin-right: 2rem
+          margin-bottom: 1rem
+        ol
+          display: none
+
+      .mobile-menu
+        display: none
+        background-color: white
+        width: 100%
+        position: relative
+        height: 100vh
+        top: 0
+        left: 0
+        a
+          min-height: 64px
+          display: flex
+          flex-direction: row
+          flex-wrap: wrap
+          justify-content: center
+          border: 1px none
+          border-bottom-style: solid
+          width: 80%
+          margin: auto
+          padding: 0.5rem
+          padding-top: 1rem
+          color: $nav-link
+          text-decoration: none
+        a:hover
+          background-color: #e5e5e5
+        img
+          max-width: 64px

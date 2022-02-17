@@ -1,0 +1,946 @@
+.flex-core {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-attribute-spaced-around {
+  justify-content: space-around;
+}
+
+.flex-attribute-align-center {
+  align-items: center;
+}
+
+.flex-attribute-space-between {
+  justify-content: space-between;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.font-size-large {
+  font-size: 1.5rem;
+}
+
+.font-align-center {
+  text-align: center;
+}
+
+button {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: white;
+  color: red;
+  font-weight: bold;
+  transition: background-color 200ms linear;
+}
+
+h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  color: #4D4D4D;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+body .header-nav-container nav ol {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: white;
+  list-style: none;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 4%;
+}
+body .header-nav-container nav ol a {
+  color: #4D4D4D;
+  text-decoration: none;
+  padding: 1ch;
+}
+body .header-nav-container nav ol a img {
+  max-height: 1.5rem;
+}
+body .header-nav-container nav ol .icon-light {
+  display: none;
+}
+body .header-nav-container .nav-spacer {
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (min-width: 1024px) {
+  body .header-nav-container nav {
+    width: 50%;
+  }
+  body .header-nav-container nav #mobile-toggle {
+    display: none;
+  }
+  body .header-nav-container .mobile-menu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  body .header-nav-container nav {
+    width: 80%;
+    margin-left: 1rem;
+  }
+  body .header-nav-container nav #mobile-toggle {
+    display: none;
+  }
+  body .header-nav-container .mobile-menu {
+    display: none;
+  }
+}
+@media only screen and (max-width: 599px) {
+  body .header-nav-container nav #mobile-toggle {
+    width: 32px;
+    display: inherit;
+    margin-top: 2.2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+  }
+  body .header-nav-container nav ol {
+    display: none;
+  }
+  body .header-nav-container .mobile-menu {
+    display: none;
+    background-color: white;
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+  body .header-nav-container .mobile-menu a {
+    min-height: 64px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px none;
+    border-bottom-style: solid;
+    width: 80%;
+    margin: auto;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    color: #4D4D4D;
+    text-decoration: none;
+  }
+  body .header-nav-container .mobile-menu a:hover {
+    background-color: #e5e5e5;
+  }
+  body .header-nav-container .mobile-menu img {
+    max-width: 64px;
+  }
+}
+body .header-nav-container-sticky {
+  z-index: 1;
+  background-color: red;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0 !important;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+}
+body .header-nav-container-sticky header h1 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+body .header-nav-container-sticky nav ol {
+  background-color: transparent;
+  box-shadow: none;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 0.25rem 10% 0;
+}
+body .header-nav-container-sticky nav ol .nav-spacer {
+  background-color: white;
+}
+body .header-nav-container-sticky nav ol a {
+  color: white;
+}
+body .header-nav-container-sticky nav ol a img {
+  padding-right: 0.25rem;
+  max-height: 1.5rem;
+}
+body .header-nav-container-sticky nav ol a .icon-dark {
+  display: none;
+}
+body .header-nav-container-sticky nav ol a .icon-light {
+  display: inherit;
+}
+body .header-nav-container-sticky #mobile-toggle {
+  width: 32px;
+  display: inherit;
+  margin-top: 1rem !important;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+body .header-nav-container-sticky #mobile-toggle .nav-spacer {
+  width: 1px;
+  background-color: whitesmoke;
+}
+
+body .header-nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+body .header-nav-container header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+  width: 50%;
+}
+body .header-nav-container header img {
+  max-height: 64px;
+}
+
+@media only screen and (min-width: 1024px) {
+  body .header-nav-container {
+    margin-left: 25vw;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  body .header-nav-container {
+    width: 100%;
+  }
+  body .header-nav-container header {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 599px) {
+  body .header-nav-container {
+    width: 100%;
+  }
+  body .header-nav-container header {
+    width: 85%;
+  }
+  body .header-nav-container header h1 {
+    font-size: 2rem;
+  }
+}
+body footer {
+  width: 100%;
+  background-color: #333333;
+  color: white;
+}
+body footer #footer-main-content {
+  max-width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: auto;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+body footer #company-section {
+  max-width: 30%;
+}
+body footer #company-section div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body footer #company-section div img {
+  max-width: 128px;
+}
+body footer #company-section div p {
+  text-align: left;
+  line-height: 0.5rem;
+}
+body footer #links {
+  display: flex;
+  flex-direction: column;
+  min-width: 30%;
+}
+body footer #links a {
+  text-decoration: none;
+  color: #A6A6A6;
+}
+body footer #links a:hover {
+  text-decoration: underline;
+}
+body footer #improvement a {
+  text-decoration: none;
+  color: white;
+}
+body footer #improvement a p {
+  font-size: 1.25rem;
+  text-align: center;
+}
+body footer #improvement a img {
+  max-width: 64px;
+  min-width: 30%;
+}
+body footer #email {
+  max-width: 100%;
+  background-color: red;
+  text-align: center;
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+body footer #email a {
+  color: #F4F4F4;
+  padding: 0.5rem;
+}
+body footer #email a:visited {
+  color: #F4F4F4;
+}
+body footer #email a:hover {
+  text-decoration: none;
+  background-color: white;
+  color: red;
+  border-radius: 0.25rem;
+  transition: background-color 200ms linear;
+}
+body footer #rmit {
+  max-width: 100%;
+  background-color: #222222;
+  text-align: center;
+  padding: 1rem;
+  color: #A6A6A6;
+}
+
+@media only screen and (min-width: 1024px) {
+  body footer #links {
+    padding-top: 2rem;
+    min-width: 30%;
+  }
+  body footer #company-section {
+    min-width: 30%;
+  }
+  body footer #improvement {
+    padding-top: 2rem;
+    min-width: 30%;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  body footer #links {
+    max-width: 30%;
+  }
+  body footer #company-section {
+    min-width: 100%;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: #A6A6A6;
+    border-width: 2px;
+    border-style: solid;
+    margin-bottom: 2rem;
+  }
+  body footer #improvement {
+    max-width: 30%;
+  }
+}
+@media only screen and (max-width: 599px) {
+  body footer #email a:hover {
+    background-color: transparent;
+    color: white;
+  }
+  body footer #links {
+    min-width: 100%;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: #A6A6A6;
+    border-width: 2px;
+    border-style: solid;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+  }
+  body footer #company-section {
+    min-width: 100%;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: #A6A6A6;
+    border-width: 2px;
+    border-style: solid;
+    margin-bottom: 2rem;
+  }
+  body footer #improvement {
+    min-width: 100%;
+  }
+}
+body #debug {
+  position: sticky;
+  bottom: 0;
+  background-color: whitesmoke;
+}
+body #debug #header {
+  background-color: #e5e5e5;
+  min-height: 2rem;
+  border-top: #222222;
+  border-width: 2px;
+}
+body #debug #header h1 {
+  font-size: 1rem;
+}
+body #debug #header #border {
+  background-color: #8100D6;
+  height: 5px;
+}
+body #debug nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 1px none rgba(0, 0, 0, 0.2);
+  border-bottom-style: solid;
+}
+body #debug nav a {
+  display: flex;
+  flex-direction: row;
+  padding: 0.25rem 0.5rem;
+  height: 100%;
+  text-decoration: none;
+  color: #404040;
+  border: 1px solid transparent;
+  border-right-color: rgba(0, 0, 0, 0.2);
+  border-left-color: rgba(0, 0, 0, 0.2);
+}
+body #debug nav a .count {
+  margin-left: 0.5rem;
+  background-color: #8100D6;
+  border-radius: 50%;
+  width: 16px;
+  color: white;
+  text-align: center;
+}
+body #debug nav a img {
+  width: 16px;
+}
+body #debug nav a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+body #debug nav item {
+  margin: 0.25rem;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+body #debug nav item img {
+  padding-right: 0.5rem;
+  max-width: 16px;
+}
+body #debug nav .float-right {
+  margin-left: auto;
+}
+body #debug nav #logo {
+  width: 20ch;
+}
+body #debug nav #logo #mobile-error {
+  display: none;
+}
+body #debug nav #logo img {
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 0.5rem;
+}
+body #debug nav #close-icon {
+  margin-left: 1rem;
+}
+body #debug .active {
+  background-color: #8100D6;
+  color: white;
+}
+body #debug .active .count {
+  background-color: white;
+  color: #8100D6;
+}
+body #debug .active:hover {
+  background-color: #61009e;
+}
+body #debug .inactive-content {
+  display: none;
+}
+body #debug .active-content {
+  display: block;
+  height: 15rem;
+  width: 100%;
+  overflow: auto;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+@media only screen and (max-width: 599px) {
+  body #debug nav a {
+    display: none;
+  }
+  body #debug nav item {
+    display: none;
+  }
+  body #debug nav #logo {
+    display: flex;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  body #debug nav #logo #mobile-error {
+    display: initial;
+    padding: 0;
+    padding-left: 0.5rem;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  #messageContent {
+    display: none;
+  }
+
+  #sessionContent {
+    display: none;
+  }
+
+  #requestContent {
+    display: none;
+  }
+}
+.card-container {
+  position: relative;
+  width: 500px;
+  min-height: 450px;
+  margin: 1rem;
+}
+.card-container .card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 5px 2.5px rgba(0, 0, 0, 0.3);
+}
+.card-container .card .front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: whitesmoke;
+  color: black;
+}
+.card-container .card .front h4 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  background-color: red;
+  color: white;
+  margin-bottom: 1rem;
+}
+.card-container .card .front .flex {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  flex-wrap: wrap;
+}
+.card-container .card .front .left {
+  min-width: 50%;
+  padding: 0.5rem;
+}
+.card-container .card .front .left img {
+  max-height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-container .card .front #rating {
+  background-color: #232323;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  max-width: 10rem;
+  margin: auto;
+  margin-top: 1rem;
+}
+.card-container .card .front .right {
+  height: 100%;
+  padding: 0.5rem;
+}
+.card-container .card .front .right h5 {
+  font-size: 1.25rem;
+  margin: 0.5rem;
+  margin-left: 0;
+  text-decoration: underline;
+}
+.card-container .card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: whitesmoke;
+  color: black;
+  transform: rotateY(180deg);
+}
+.card-container .card .back h4 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  background-color: red;
+  color: white;
+  margin-bottom: 1rem;
+}
+.card-container .card .back p {
+  padding: 1rem;
+}
+.card-container .card .back a {
+  padding: 1rem;
+}
+.card-container .card:focus {
+  transform: rotateY(180deg);
+}
+.card-container .card:hover {
+  cursor: pointer;
+  background-color: #DEDEDEFF;
+}
+
+@media only screen and (max-width: 599px) {
+  .card-container {
+    min-height: 750px;
+  }
+  .card-container .card .front .left {
+    width: 100%;
+  }
+  .card-container .card .front h4 {
+    font-size: 1.5rem;
+  }
+  .card-container .card .front .right {
+    width: 100%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+body #background {
+  position: absolute;
+  background-image: linear-gradient(40deg, transparent 50%, red 50%);
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+body #background-2 {
+  position: absolute;
+  min-height: 90vh;
+  width: 100%;
+  z-index: -1;
+  left: 0;
+  top: 100vh;
+  background-color: whitesmoke;
+  background-image: url("https://images.pexels.com/photos/7991319/pexels-photo-7991319.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main section {
+  padding: 1rem;
+  min-height: 80vh;
+  max-width: 75%;
+  margin: 10vh auto;
+}
+body main section h2 {
+  margin: 0;
+  margin-bottom: 2rem;
+  color: #2a2a2a;
+}
+body #about-us h2 {
+  display: none;
+}
+body #about-us h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+body #about-us .image-container {
+  position: absolute;
+  left: 10%;
+  top: 80vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body #about-us .image-container img {
+  padding: 1rem;
+  height: 64px;
+}
+body #now-showing {
+  margin-top: 2rem;
+}
+body #movie-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 599px) {
+  body main section {
+    max-width: 95% !important;
+  }
+  body #about-us {
+    text-align: center;
+  }
+  body #about-us .image-container {
+    display: none;
+  }
+}
+body main #seats-and-prices h2 {
+  color: white;
+}
+body main #seats-and-prices .container div {
+  width: 100%;
+  margin-top: 2rem;
+}
+body main #seats-and-prices .container div .flex {
+  display: flex;
+  flex-direction: row;
+}
+body main #seats-and-prices .container div .flex .left {
+  background-color: red;
+  color: white;
+  width: 20ch;
+  text-align: center;
+}
+body main #seats-and-prices .container div .flex .left h4 {
+  background-color: #d50000;
+  margin-top: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+body main #seats-and-prices .container div .flex .middle {
+  width: 20ch;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+body main #seats-and-prices .container div .flex .middle button {
+  margin: 0.125rem;
+}
+body main #seats-and-prices .container div .flex .middle h4 {
+  background-color: #e7e7e7;
+  margin-top: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+body main #seats-and-prices .container div .flex p img {
+  max-width: 16px;
+}
+body main #seats-and-prices .container #imageSlider {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  padding-top: 2rem;
+}
+body main #seats-and-prices .container #imageSlider .slide {
+  display: none;
+}
+body main #seats-and-prices .container #imageSlider .slide img {
+  max-width: 512px;
+  display: block;
+  margin: auto;
+}
+body main #seats-and-prices .container #imageSlider .slide h3 {
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  width: 20ch;
+  margin: auto;
+}
+
+@media only screen and (max-width: 599px) {
+  body main #seats-and-prices .container div {
+    margin-bottom: 2rem;
+  }
+  body main #seats-and-prices .container div .left {
+    width: 100% !important;
+  }
+  body main #seats-and-prices .container div .middle {
+    width: 100% !important;
+  }
+  body main #seats-and-prices #imageSlider {
+    margin-bottom: 2rem;
+  }
+  body main #seats-and-prices #imageSlider .slide img {
+    max-width: 256px !important;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  body main #seats-and-prices div {
+    margin-bottom: 2rem;
+  }
+  body main #seats-and-prices div .left {
+    width: 100% !important;
+  }
+  body main #seats-and-prices div .left .middle {
+    width: 100% !important;
+  }
+  body main #seats-and-prices #imageSlider {
+    margin-bottom: 2rem;
+  }
+  body main #seats-and-prices #imageSlider .slide img {
+    max-width: 256px !important;
+  }
+}
+body #booking-container {
+  background-color: white;
+  box-shadow: 0px 0px 5px 2.5px rgba(0, 0, 0, 0.3);
+  min-height: 80vh;
+  max-width: 80%;
+  margin: auto;
+}
+body #booking-container section {
+  min-height: 0;
+}
+body #booking-container section h2 {
+  text-align: center;
+}
+body #booking-container section iframe {
+  display: block;
+  width: 70%;
+  margin: auto;
+}
+body #booking-container section form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+body #booking-container section form div {
+  padding: 1rem;
+}
+body #booking-container section form div input {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+body #booking-container section form div input[type=radio] {
+  appearance: none;
+  font: inherit;
+  width: 1.15em;
+  height: 1.15em;
+  background-color: #790000;
+  margin: 0;
+  margin-right: 0.5rem;
+}
+body #booking-container section form div input[type=radio]:checked {
+  background-color: red;
+  box-shadow: 0px 0px 2.5px 1.25px rgba(0, 0, 0, 0.5);
+}
+body #booking-container section form div label {
+  margin: 0.5rem;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  body #booking-container {
+    max-width: 90%;
+  }
+  body #booking-container section iframe {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 599px) {
+  body #booking-container {
+    max-width: 100%;
+  }
+  body #booking-container section iframe {
+    width: 100%;
+  }
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+  font-family: "Inter", sans-serif;
+}
+
+#toggleWireframeCSS {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 1rem;
+  z-index: 0;
+}
+
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 1em;
+  padding: 0 0.5em;
+}
+
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  opacity: 0;
+  width: 150px;
+  transform: translateX(-50%);
+  bottom: 25px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.25em;
+  color: black;
+  text-align: center;
+  transition: 0.2s;
+  font-size: 1rem;
+  box-shadow: 0px 0px 5px 2.5px rgba(0, 0, 0, 0.3);
+}
+
+[data-tooltip]:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  bottom: 15px;
+  margin-left: -5px;
+  border: 5px solid black;
+  border-color: black transparent transparent transparent;
+  transition: 0.2s;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  opacity: 1;
+}
+
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
