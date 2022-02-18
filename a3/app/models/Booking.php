@@ -7,6 +7,8 @@
 
 namespace app\models;
 
+use JetBrains\PhpStorm\ArrayShape;
+
 class Booking
 {
     private $orderDate;
@@ -14,6 +16,7 @@ class Booking
     private $email;
     private $mobile;
     private $movieCode;
+    private $movieTitle;
     private $dayOfMovie;
     private $timeOfMovie;
     private $seat;
@@ -22,7 +25,7 @@ class Booking
     private $totalCost;
     private $gstIncluded;
 
-    public function __construct(string $movieCode, string $name,string  $email, string $mobile,string $dayOfMovie, string $timeOfMovie, Seat $seat, int $seatQuantity){
+    public function __construct(string $movieCode, string $moveTitle , string $name, string $email, string $mobile, string $dayOfMovie, string $timeOfMovie, Seat $seat, int $seatQuantity){
 
         $this->orderDate = date("Y-m-d h:i:sa", time());
         $this->name = $name;
@@ -33,6 +36,7 @@ class Booking
         $this->timeOfMovie = $timeOfMovie;
         $this->seat = $seat;
         $this->seatQuantity = $seatQuantity;
+        $this->movieTitle = $moveTitle;
 
         $this->file = ROOT."bookings.txt";
 
@@ -69,6 +73,55 @@ class Booking
 
         }
 
+    }
+
+    #[ArrayShape(["name" => "string", "email" => "string", "phone" => "string"])] public function getCustomer(): array
+    {
+        return [
+            "name" => $this->name,
+            "email" => $this->email,
+            "phone" => $this->mobile,
+        ];
+    }
+
+    #[ArrayShape(["title" => "string", "code" => "string"])] public function getMovie(): array{
+     return [
+         "title" => $this->movieTitle,
+         "code" => $this->movieCode
+     ];
+    }
+
+    public function getDate(): string
+    {
+        return $this->dayOfMovie;
+    }
+
+    public function getTime(): string
+    {
+        return $this->timeOfMovie;
+    }
+
+    public function getSeat(): Seat
+    {
+        return $this->seat;
+    }
+
+    public function getQuantity(): int
+    {
+        return $this->seatQuantity;
+    }
+
+    public function getTotal(){
+        return $this->totalCost;
+    }
+
+    public function getGST(){
+        return $this->gstIncluded;
+    }
+
+    public function getOrderDate(): string
+    {
+        return $this->orderDate;
     }
 
 }
