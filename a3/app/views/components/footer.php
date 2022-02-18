@@ -1,4 +1,4 @@
-<footer>
+<footer class="noPrint">
     <section id="email">
         Need help booking? contact us at <a href="mailto:info@luncardocinemas.com">info@luncardocinemas.com</a>
     </section>
@@ -42,7 +42,3 @@
 
 </body>
 </html>
-
-
-<!-- Sticky Navbar script by W3 schools https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
-<script src="./resources_js/?file=navbar"></script>
