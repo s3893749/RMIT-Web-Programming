@@ -1,6 +1,6 @@
 <!-- Luncardo Debugbar created by Jack Harris, design based on larvel & PHP Debugbar -->
 
-<aside id="debug">
+<aside id="debug" class="noPrint">
     <section id="header">
         <div id="border"></div>
         <nav>
