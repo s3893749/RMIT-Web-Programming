@@ -20,3 +20,8 @@
     echo '<script src="./resources_js/?file=navbarProgramming"></script>
 ';
 }?>
+
+
+<!-- Sticky Navbar script by W3 schools https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+<script src="./resources_js/?file=navbar"></script>
+
