@@ -90,7 +90,7 @@ class DefaultController
 
                 if($validPhone && $validSeat && $validDateTime && $validFilm && $validName && $validEmail){
 
-                $_SESSION["booking"] = new Booking($_POST["movie_code"],$_POST["name"], $_POST["email"],$_POST["mobile_number"],$dateTimeArray["day"],$dateTimeArray["time"], $seat, $_POST["quantity"]);
+                $_SESSION["booking"] = new Booking($_POST["movie_code"],$film->getTitle(),$_POST["name"], $_POST["email"],$_POST["mobile_number"],$dateTimeArray["day"],$dateTimeArray["time"], $seat, $_POST["quantity"]);
 
                 Header("Location: ./confirmation");
 
