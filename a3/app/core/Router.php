@@ -7,8 +7,6 @@
 
 namespace App\Core;
 
-use JetBrains\PhpStorm\ArrayShape;
-
 class Router
 {
     private array $routes;
@@ -22,7 +20,7 @@ class Router
         $this->routes = $routes;
     }
 
-    #[ArrayShape(["status" => "bool", "controller" => "mixed", "endpoint" => "mixed"])] public function analyseRoute(): array
+    public function analyseRoute(): array
     {
 
         $url = $this->processUrl();
