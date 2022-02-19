@@ -5,6 +5,7 @@
  * Last Updated - 16/02/2022
  */
 
+
 //constant variables for directory locations
 use app\core\Application;
 
@@ -16,6 +17,9 @@ const ROUTES = ROOT . 'app' . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARAT
 const VIEWS = ROOT. 'app' . DIRECTORY_SEPARATOR .'views'.DIRECTORY_SEPARATOR;
 const RESOURCES = ROOT. 'app' .DIRECTORY_SEPARATOR .'resources'.DIRECTORY_SEPARATOR;
 const CONTROLLERS = ROOT. 'app'.DIRECTORY_SEPARATOR.'controllers'.DIRECTORY_SEPARATOR;
+
+//BUGGED can't autoload for some reason
+require_once ROUTES."Web.php";
 
 //**** PHP CLASS AUTO LOADER ****\\
 //create array of folders to be auto-loaded by PHP.
