@@ -1,9 +1,9 @@
 <nav>
     <a href="javascript:showMobileMenu();" id="mobile-toggle"><img src="../../media/svg/mobile-toggle.svg" alt="Mobile Menu Icon Light" class="icon-light"></a>
     <ol>
-        <li><a href="./#about-us" class="flex-core" id="about-us">About Us</a></li>
-        <li><a href="./#seats-and-prices" class="flex-core" id="seats-and-prices">Seats & Prices</a></li>
-        <li><a href="./#now-showing" class="flex-core" id="now-showing" style="margin-top: 0">Now Showing</a></li>
+        <li><a href="./#about-us"  class="flex-core" id="about-us">About Us</a></li>
+        <li><a href="./#seats-and-prices"  class="flex-core" id="seats-and-prices">Seats & Prices</a></li>
+        <li><a href="./#now-showing"  class="flex-core" id="now-showing" style="margin-top: 0">Now Showing</a></li>
         <li class="nav-spacer"></li>
         <li><a href="./booking" class="flex-core bold flex-attribute-align-center flex-attribute-spaced-around" <?php if($GLOBALS["endpoint"] == "/booking"){echo "style='text-decoration: underline;'";}?>><img src="../../media/svg/ticket.svg" alt="Ticket Icon Dark" class="icon-dark"><img src="../../media/svg/ticket-light.svg" alt="Ticket Icon Light" class="icon-light"> Bookings</a></li>
     </ol>
