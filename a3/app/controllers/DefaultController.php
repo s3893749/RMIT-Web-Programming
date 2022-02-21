@@ -30,10 +30,10 @@ class DefaultController
                 if(isset($_GET["code"])){
                     $film = $this->findFilm($_GET["code"]);
                     if($film == null){
-                        header("Location: ./");
+                        header("Location: ./#now-showing");
                     }
                 }else{
-                    header("Location: ./");
+                    header("Location: ./#now-showing");
                 }
 
                 include(VIEWS . "booking.php");
