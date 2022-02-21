@@ -6,11 +6,6 @@
 
     window.addEventListener('scroll', (e) => {
 
-        console.log("Y = "+window.scrollY);
-        console.log("screen height"+window.innerHeight);
-
-        console.log("href = "+window.location.href);
-
         //check for the about us section
         if(window.scrollY < window.innerHeight-100){
         aboutUs.style.textDecoration = "underline"
