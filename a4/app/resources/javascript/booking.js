@@ -197,7 +197,7 @@ function processForm(){
     if(rememberMe){
         window.localStorage.setItem("details", JSON.stringify(details));
     }else{
-        window.localStorage.setItem("details", null);
+        window.localStorage.removeItem("details");
     }
 }
 
