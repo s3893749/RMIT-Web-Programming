@@ -9,7 +9,7 @@
 //constant variables for directory locations
 use app\core\Application;
 
-define('ROOT', dirname(__DIR__) . DIRECTORY_SEPARATOR . "a3". DIRECTORY_SEPARATOR);
+define('ROOT', dirname(__DIR__) . DIRECTORY_SEPARATOR . "a4". DIRECTORY_SEPARATOR);
 const APP = ROOT . 'app' . DIRECTORY_SEPARATOR;
 const CORE = ROOT . 'app' . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR;
 const MODELS = ROOT . 'app' . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR;
