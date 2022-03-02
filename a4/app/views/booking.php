@@ -68,7 +68,7 @@
             <div style="min-width: 229px">
                 <h3>Quantity</h3>
                 <label for="quantity">Quantity</label><br>
-                <input type="number" id="quantity" name="quantity" min="1" step="1" value="1" disabled hidden>
+                <input type="number" id="quantity" name="quantity" min="1" step="1" value="1" hidden>
                 <br>
                 <button onclick="event.preventDefault(); decreaseQuanity()" class="quanity-button"><</button>
                 <div id="quanity-display">1</div>
@@ -80,7 +80,8 @@
                 <p id="discount-active" style="display: none;">Discount Active</p>
             </div>
             <div>
-                <button type="submit" id="submit">Create Booking</button>
+                <button onclick="event.preventDefault(); updateRememberMe();" id="remember-me">Remember me!</button>
+                <button type="submit" id="submit" onclick="processForm()">Create Booking</button>
             </div>
 
 
