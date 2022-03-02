@@ -207,9 +207,11 @@ if(window.localStorage.getItem("details") != null){
     fullname.value = details.name;
     email.value = details.email;
 
-    validatedEmail = validateEmail(email.value);
-    validatedPhone = validatePhone(phone.value);
-    validatedName = validateName(fullname.value);
+    //these can be assumed to be true due to the validation that took place the first time they were checked
+
+    validatedEmail = true;
+    validatedPhone = true;
+    validatedName = true;
 
     updateButton();
 }
