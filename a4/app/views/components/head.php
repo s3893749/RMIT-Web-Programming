@@ -12,6 +12,10 @@
         echo '<link id="stylecss" type="text/css" rel="stylesheet" href="./resources_css/?file=confirmation">';
     }?>
 
+    <?php if($GLOBALS["endpoint"] == "/booking"){
+        echo '<link id="stylecss" type="text/css" rel="stylesheet" href="./resources_css/?file=a4">';
+    }?>
+
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <script src='../wireframe.js'></script>
