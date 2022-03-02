@@ -206,4 +206,10 @@ if(window.localStorage.getItem("details") != null){
     phone.value = details.phone;
     fullname.value = details.name;
     email.value = details.email;
+
+    validatedEmail = validateEmail(email.value);
+    validatedPhone = validatePhone(phone.value);
+    validatedName = validateName(fullname.value);
+
+    updateButton();
 }
