@@ -18,7 +18,6 @@
         <iframe width="560" height="315" src="<?php echo $film->getTrailer()?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
     <p id="discount-banner" style="display: none; text-align: center; background-color: red; color: white; max-width: 50%; margin: auto; padding: 1rem">Discount time chosen! enjoy the reduced price!</p>
-
     <section>
         <form action="./booking-validation" method="post" id="booking">
             <div style="display: none">
@@ -66,10 +65,14 @@
                 }
                 ?>
             </div>
-            <div>
+            <div style="min-width: 229px">
                 <h3>Quantity</h3>
                 <label for="quantity">Quantity</label><br>
-                <input type="number" id="quantity" name="quantity" min="1" step="1">
+                <input type="number" id="quantity" name="quantity" min="1" step="1" value="1" disabled hidden>
+                <br>
+                <button onclick="event.preventDefault(); decreaseQuanity()" class="quanity-button"><</button>
+                <div id="quanity-display">1</div>
+                <button onclick="event.preventDefault(); increaseQuanity()" >></button>
             </div>
             <div>
                 <h3>Total</h3>
