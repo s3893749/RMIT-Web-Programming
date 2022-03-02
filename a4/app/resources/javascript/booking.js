@@ -132,3 +132,38 @@
 }
     return outcome;
 }
+
+function increaseQuanity(){
+        let value = parseInt(document.getElementById("quantity").value);
+        let quanityDisplay = document.getElementById("quanity-display");
+        if(value < 10){
+            value+=1;
+        }
+        quanityDisplay.innerText = value.toString();
+        document.getElementById("quantity").value = value;
+
+        calculateViaButtonPress();
+
+}
+
+function decreaseQuanity(){
+
+    let value = parseInt(document.getElementById("quantity").value);
+    let quanityDisplay = document.getElementById("quanity-display");
+    if(value > 1){
+        value-=1;
+    }
+    quanityDisplay.innerText = value.toString();
+    document.getElementById("quantity").value = value;
+
+    calculateViaButtonPress();
+
+}
+
+function calculateViaButtonPress(){
+    date = document.querySelector('input[name="date"]:checked').value;
+    seat = document.querySelector('input[name="seat-code"]:checked').value;
+    if(date != null && seat != null) {
+        calculate(JSON.parse(date), JSON.parse(seat));
+    }
+}
