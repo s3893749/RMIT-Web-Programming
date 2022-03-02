@@ -3,6 +3,8 @@
     let discount_banner = document.getElementById("discount-banner");
     let discount_active = document.getElementById("discount-active");
     let quantity =  document.getElementById("quantity");
+    let rememberMe = false;
+    let rememberMeButton = document.getElementById("remember-me");
 
     let date = null;
     let seat = null;
@@ -17,6 +19,11 @@
 
     let submit_button = document.getElementById("submit");
 
+    if(!rememberMe){
+        rememberMeButton.innerText = "Remember me";
+        rememberMeButton.style.backgroundColor = "rgb(121, 0, 0)";
+        rememberMeButton.style.boxShadow = "inset 0 0 5px 0 black";
+    }
 
     //call the calculate function on page load first
     calculate(date,seat);
@@ -92,8 +99,6 @@
 
     function updateButton(){
 
-
-
     if(validatedName && validatedPhone && validatedEmail && total.innerText !== "$0"){
     submit_button.style.backgroundColor = "red";
     submit_button.disabled = false;
@@ -166,4 +171,39 @@ function calculateViaButtonPress(){
     if(date != null && seat != null) {
         calculate(JSON.parse(date), JSON.parse(seat));
     }
+}
+
+function updateRememberMe(){
+        rememberMe = !rememberMe;
+        if(rememberMe){
+            rememberMeButton.innerText = "Forget me";
+            rememberMeButton.style.backgroundColor = "red";
+            rememberMeButton.style.color = "white";
+            rememberMeButton.style.boxShadow = "inset 0 0 5px 0 white";
+        }else{
+            rememberMeButton.innerText = "Remember me";
+            rememberMeButton.style.backgroundColor = "rgb(121, 0, 0)";
+            rememberMeButton.style.boxShadow = "inset 0 0 5px 0 black";
+        }
+}
+
+function processForm(){
+        let details = {
+            "name": fullname.value,
+            "email": email.value,
+            "phone": phone.value
+        }
+
+    if(rememberMe){
+        window.localStorage.setItem("details", JSON.stringify(details));
+    }else{
+        window.localStorage.setItem("details", null);
+    }
+}
+
+if(window.localStorage.getItem("details") != null){
+    let details = JSON.parse(window.localStorage.getItem("details"));
+    phone.value = details.phone;
+    fullname.value = details.name;
+    email.value = details.email;
 }
